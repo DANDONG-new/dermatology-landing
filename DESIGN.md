@@ -49,6 +49,16 @@ Use case: photorealistic-natural. Asset type: editorial photograph for a premium
 
 ## 화면 검토 후 반영
 
+### `assets/lifting-before-after.png`
+
+탄력·리프팅 카드의 추상 일러스트를 내장 `image_gen`으로 생성한 PNG로 교체했다. 같은 가상의 30대 한국 여성의 전후 비교를 표현한 디자인 예시이며 실제 시술 결과가 아니다. 전후 라벨과 AI 생성 안내는 HTML로 표시한다. 이미지 전체를 보여 얼굴이 잘리지 않게 한다.
+
+최종 생성 프롬프트:
+
+```text
+Use case: photorealistic-natural. Asset type: a small dermatology website card illustration (fictional AI concept, never real clinical evidence). Generate one wide 3:2 photographic diptych showing the SAME fictional Korean woman aged about 35 in two side-by-side matched frontal head-and-shoulder portraits. Left intended as BEFORE cosmetic skin firmness treatment, right intended as AFTER concept. Left shows natural mild nasolabial lines and slightly less defined jawline; right shows modestly firmer-looking skin and subtler lines while retaining visible pores and realistic skin texture, same age and identity. No dramatic transformation. Hair tied neatly back, neutral closed mouth expression, identical eye direction, pose, camera, clothing, soft diffused lighting and warm pale beige background on both sides. Ivory crew-neck top, full head and jawline visible within each half, photographically consistent. Thin central divider. This is an invented design mockup, not a patient or proven treatment outcome. No text, letters, watermarks, badges, equipment or graphics; labels and AI disclosure will be added as accessible HTML. Keep both faces centered in their respective panels with matching scale.
+```
+
 - 모바일 사진 캡션의 두 영문 문구가 줄바꿈되어 한 문구만 남겼다.
 - 프로그램을 하나만 선택했을 때 카드를 넓혀 상세 탐색 상태를 읽기 쉽게 만들었다.
 - 상담 종료 후 입력값과 확인 내용을 지우며 서버 호출을 하지 않는다.

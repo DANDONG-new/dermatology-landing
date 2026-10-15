@@ -1,5 +1,5 @@
 {
-  "testedAt": "2026-10-15T11:53:16.830Z",
+  "testedAt": "2026-10-15T12:29:07.533Z",
   "browser": "155.0.8059.40",
   "checks": [
     "Page, title and both local image assets load",

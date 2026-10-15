@@ -34,6 +34,8 @@ function nextWeekday(weekday) {const day = new Date();day.setDate(day.getDate()+
   try {
     await page.goto(pathToFileURL(path.join(root,'index.html')).href);
     await page.evaluate(() => document.fonts.ready);
+    await page.locator('img').evaluateAll(images => { for (const image of images) image.loading = 'eager'; });
+    await page.locator('img').evaluateAll(images => Promise.all(images.map(image => image.decode())));
     assert.match(await page.title(), /오브 피부과/);
     assert.equal(await page.locator('h1').count(),1);
     assert.equal(await page.locator('img').evaluateAll(images => images.every(image => image.complete && image.naturalWidth > 0)),true);

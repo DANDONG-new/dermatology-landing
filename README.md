@@ -42,3 +42,7 @@ Google Fonts에서 웹폰트를 가져옵니다. 인터넷이 없으면 Windows�
 현재 환경에서는 `node qa/verify.cjs`로 재검증할 수 있습니다. 설치된 Playwright 또는 Codex에 번들된 Playwright와 PC에 설치된 Chrome/Edge를 사용합니다. 이 테스트 도구는 사이트 실행에 필요하지 않습니다. 다른 PC에서는 Playwright가 제공되는 개발 환경에서 실행하세요.
 
 검증 범위는 로컬 Chrome의 320~1920px 반응형 화면, 메뉴와 링크, 프로그램 필터 및 키보드 이동, 상세 안내, 상담 폼, 전화번호·날짜 검증, 예시 진료 시간, 입력값 삭제, 네트워크 미전송, 인터넷 차단 시 기본 동작입니다. 실제 휴대전화 기기나 운영 예약 시스템은 검증하지 않았습니다.
+
+## GitHub Pages 배포
+
+`.github/workflows/deploy-pages.yml`은 `main` 브랜치에 반영되면 정적 사이트를 GitHub Pages에 배포합니다. 저장소 설정의 **Settings → Pages → Build and deployment → Source**에서 **GitHub Actions**를 선택하세요. 배포 주소와 결과는 저장소의 **Actions** 탭에서 확인할 수 있습니다. 공개 사이트는 실제 병원 정보가 아닌 가상 브랜드 및 AI 콘셉트 이미지가 포함된 디자인 시안입니다.
