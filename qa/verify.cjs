@@ -39,7 +39,7 @@ function nextWeekday(weekday) {const day = new Date();day.setDate(day.getDate()+
     assert.match(await page.title(), /오브 피부과/);
     assert.equal(await page.locator('h1').count(),1);
     assert.equal(await page.locator('img').evaluateAll(images => images.every(image => image.complete && image.naturalWidth > 0)),true);
-    pass('Page, title and both local image assets load');
+    pass('Page, title and all local image assets load');
     assert.deepEqual(await page.locator('a[href^="#"]').evaluateAll(links => links.filter(link => !document.getElementById(link.hash.slice(1))).map(link => link.hash)),[]);
     pass('All navigation anchors resolve');
     await page.screenshot({path:path.join(root,'qa/desktop.png'),fullPage:true});

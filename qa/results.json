@@ -1,8 +1,8 @@
 {
-  "testedAt": "2026-10-15T12:29:07.533Z",
+  "testedAt": "2026-10-15T13:06:34.755Z",
   "browser": "155.0.8059.40",
   "checks": [
-    "Page, title and both local image assets load",
+    "Page, title and all local image assets load",
     "All navigation anchors resolve",
     "No horizontal overflow at 9 mobile, tablet and desktop widths",
     "Program filtering and keyboard tab navigation work",
