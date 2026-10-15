@@ -1,0 +1,20 @@
+{
+  "testedAt": "2026-10-15T11:53:16.830Z",
+  "browser": "155.0.8059.40",
+  "checks": [
+    "Page, title and both local image assets load",
+    "All navigation anchors resolve",
+    "No horizontal overflow at 9 mobile, tablet and desktop widths",
+    "Program filtering and keyboard tab navigation work",
+    "Program details open and carry the selected program into booking",
+    "Invalid phone numbers, past dates and Sundays are rejected",
+    "Lunch break, Wednesday evening and Saturday hours match the visible timetable",
+    "Booking review, editing, Escape and data clearing work; submission makes no requests",
+    "FAQ and footer information dialogs work",
+    "Mobile navigation and fixed booking action work",
+    "Page assets, font fallbacks and booking dialog also work without internet",
+    "No JavaScript runtime errors or missing local assets"
+  ],
+  "errors": [],
+  "failedLocalAssets": []
+}
