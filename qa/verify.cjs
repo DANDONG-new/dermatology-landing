@@ -136,6 +136,8 @@ function nextWeekday(weekday) {const day = new Date();day.setDate(day.getDate()+
     await offlinePage.route(/^https?:/, route => route.abort());
     await offlinePage.goto(pathToFileURL(path.join(root,'index.html')).href);
     await offlinePage.setViewportSize({width:390,height:844});
+    await offlinePage.locator('img').evaluateAll(images => { for (const image of images) image.loading = 'eager'; });
+    await offlinePage.locator('img').evaluateAll(images => Promise.all(images.map(image => image.decode())));
     assert.equal(await offlinePage.locator('img').evaluateAll(images => images.every(image => image.complete && image.naturalWidth > 0)),true);
     assert.equal(await offlinePage.evaluate(() => document.documentElement.scrollWidth <= innerWidth),true);
     await offlinePage.locator('.mobile-book-bar button').click();
